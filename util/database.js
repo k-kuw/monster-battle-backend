@@ -1,5 +1,6 @@
 const mysql = require("mysql2");
 
+//MySQLとの連携(poolを使用)
 const pool = mysql.createPool({
   host: "localhost",
   user: "root",
@@ -7,4 +8,5 @@ const pool = mysql.createPool({
   password: "mysqlroot",
 });
 
+// promise使用
 module.exports = pool.promise();
